@@ -1,0 +1,23 @@
+{% extends 'base/model.html' %}
+{% load bootstrap %}
+{% block content %}
+
+
+<div class="col-lg-9">
+    <div style="font-size: 30px;">
+            <form method="post">
+
+                 {%  csrf_token %}
+
+                 {{form|bootstrap}}
+                 <div class="mt-1" style="font-size: 10px;">Max. 500 caracteres</div>
+                 
+                 
+                 <button type="submit" class="btn btn-success">Editar</button>
+
+             </form>
+        
+    </div>
+</div>
+
+{% endblock %}
